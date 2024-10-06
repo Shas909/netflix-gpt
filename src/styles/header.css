@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  width: 95%;
+}
+
+.header img {
+  width: 200px;
+}
