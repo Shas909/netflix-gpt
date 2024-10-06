@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(42, 43, 43);
 }
 
 code {
@@ -12,7 +13,90 @@ code {
     monospace;
 }
 
-.App {
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  width: 95%;
+}
+
+.header img {
+  width: 200px;
+}
+
+.login-card {
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.login-inner {
+  width: 300px;
+  height: 400px;
+  border-radius: 8px;
+  font-size: 40px;
+  padding: 12px;
   font-weight: bold;
-  font-size: 20px;
+  color: white;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.input-container input {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(37, 37, 37);
+  font-size: 15px;
+  color: white;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.input-container button {
+  margin-top: 20px;
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(212, 21, 21);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.forgot {
+  margin-top: 20px;
+  font-weight: 10;
+  font-size: 12px;
+}
+
+.new {
+  font-size: 12px;
+  font-weight: 10;
 }
