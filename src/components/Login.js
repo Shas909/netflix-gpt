@@ -7,13 +7,12 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase";
-import Toast from "./Toast";
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 const Login = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [signUpFlag, setSignUpFlag] = useState(false);
-  const [showToast, setShowToast] = useState(false);
-  const [toastMsg, setToastMsg] = useState(null);
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
@@ -30,14 +29,20 @@ const Login = () => {
       .then((userCredential) => {
         updateProfile(userCredential.user, {
           displayName: name.current.value,
-          photoURL: "https://example.com/jane-q-user/profile.jpg",
+          photoURL: USER_AVATAR,
         })
           .then(() => {
             // Profile updated!
             // ...
-            navigate("/browse");
-            setToastMsg("Successfully Signed Up");
-            setShowToast(true);
+            const { displayName, photoURL, uid } = auth.currentUser;
+
+            dispatch(
+              addUser({
+                userId: uid,
+                displayName: displayName,
+                photoURL: photoURL,
+              })
+            );
           })
           .catch((error) => {
             window.alert("Couldn't get user details");
@@ -47,7 +52,6 @@ const Login = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         window.alert(errorMessage);
-        navigate("/");
       });
   };
   const signInButton = () => {
@@ -58,9 +62,6 @@ const Login = () => {
     )
       .then((userCredential) => {
         const user = userCredential.user;
-        setShowToast(true);
-        setToastMsg("Successfully Signed In");
-        navigate("/browse");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -70,12 +71,6 @@ const Login = () => {
   };
   return (
     <>
-      <Toast
-        message={toastMsg}
-        show={showToast}
-        onClose={() => setShowToast(false)}
-      />
-
       <div className="login">
         <Header />
         <div className="login-card">

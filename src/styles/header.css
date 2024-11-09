@@ -17,12 +17,18 @@
   width: 80px;
   height: 30px;
   border-radius: 5px;
-  margin: 20px;
   background-color: rgb(212, 21, 21);
   border: none;
   cursor: pointer;
   color: aliceblue;
   /* font-weight: bold; */
+}
+.user-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 125px;
 }
 
 .header img {
