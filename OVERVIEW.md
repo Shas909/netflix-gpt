@@ -1,0 +1,18 @@
+- Header
+- Routing of app
+- Login form
+- Sign Up form
+- useRef hook
+- firebase setup
+- Deploying our app to production
+- Create sign up user account
+- implement sign in user API
+- Create redux store with userSlice
+- implemented sign out
+- update profile
+- BugFix : Signup user displayname and profile picture update
+- if user not signed in, redirect to login page and vice versa
+- unsubscribe to the onAuthStateChanged whenever component unmounts
+- add hard coded values to the contants file in utils folder
+- register to TMDB api, get api key and make API call
+- get data from the Now Playing api in the browse page from TMDB api

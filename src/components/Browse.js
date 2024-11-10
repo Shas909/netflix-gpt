@@ -10,7 +10,9 @@ const Browse = () => {
   return (
     <>
       <Header />
+
       <MainContainer />
+
       <SecondaryContainer />
     </>
   );
