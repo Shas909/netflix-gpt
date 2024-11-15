@@ -4,4 +4,6 @@
 }
 .movie-card img {
   border-radius: 3px;
+  position: relative;
+  z-index: 20;
 }
