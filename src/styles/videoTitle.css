@@ -6,6 +6,23 @@
   height: 100vh;
 }
 
+.inner-title-div {
+  margin-top: 8%;
+  margin-left: 24px;
+}
+
+.inner-title-div p {
+  font-size: 1.1rem;
+  width: 25%;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.inner-title-div span {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .button-div {
   margin-top: 0.6rem;
 }
@@ -26,4 +43,13 @@
 .button-div button:hover {
   background-color: rgb(186, 186, 186);
   color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .inner-title-div p {
+    font-size: 1.1rem;
+    width: 85%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 }

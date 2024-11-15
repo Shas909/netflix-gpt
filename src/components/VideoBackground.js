@@ -1,22 +1,22 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import useTrailerVideo from "../customHooks/useTrailerVideo";
+import "../styles/videoBackground.css";
 
 const VideoBackground = ({ id }) => {
   const keyData = useSelector((store) => {
     return store?.movies?.trailer;
   });
+
+  const backDropImg = useSelector((store) => {
+    return store?.movies?.nowPlayingMovies;
+  });
+
   useTrailerVideo(id);
   return (
     <>
-      <div>
+      <div className="video-background">
         <iframe
-          style={{
-            width: "100vw",
-            // height: "100vh",
-            aspectRatio: "16/9",
-            border: "none",
-          }}
           src={
             "https://www.youtube.com/embed/" +
             keyData?.key +
@@ -26,6 +26,14 @@ const VideoBackground = ({ id }) => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
           allowFullScreen
         ></iframe>
+        <img
+          src={
+            "https://image.tmdb.org/t/p/original/" +
+            (backDropImg[0]
+              ? backDropImg[0]?.backdrop_path
+              : backDropImg[1]?.backdrop_path)
+          }
+        />
       </div>
     </>
   );
