@@ -53,3 +53,30 @@
     margin-bottom: 4px;
   }
 }
+
+@media screen and (max-width: 1274px) {
+  .inner-title-div p {
+    font-size: 1.1rem;
+    width: 50%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+@media screen and (max-width: 1128px) {
+  .inner-title-div p {
+    font-size: 1.1rem;
+    width: 85%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+@media screen and (max-width: 1035px) {
+  .inner-title-div p {
+    font-size: 1.1rem;
+    width: 90%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
