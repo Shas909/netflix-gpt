@@ -1,0 +1,41 @@
+.movie-list-main {
+  margin-top: -360px;
+}
+
+.movie-cards-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: white;
+  background-color: black;
+}
+.movie-cards-container h1 {
+  position: relative;
+  z-index: 20;
+}
+
+.movie-cards-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.movie-cards-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.movie-cards-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+.movie-cards-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.movie-cards-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}

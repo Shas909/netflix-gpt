@@ -1,0 +1,7 @@
+.movie-card {
+  margin-right: 5px;
+  width: 100vw;
+}
+.movie-card img {
+  border-radius: 3px;
+}

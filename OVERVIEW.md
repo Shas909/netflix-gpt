@@ -16,3 +16,16 @@
 - add hard coded values to the contants file in utils folder
 - register to TMDB api, get api key and make API call
 - get data from the Now Playing api in the browse page from TMDB api
+- custom hook for nowPlayingMovies
+- create moviesSlice
+- update store with movies data
+- Main container and secondary container planning
+- fetch data for trailer video
+- update the store with trailer video data
+- embedded the youtube video (autoplay and mute)
+- Built the secondary component
+- Movie List
+- Movie card
+- TMDB image CDN
+- Made the browse look better
+- created more custom hooks for different API's
