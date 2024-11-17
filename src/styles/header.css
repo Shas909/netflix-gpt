@@ -16,7 +16,14 @@
   width: 95%;
 }
 
-.header-content button {
+.user-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: auto;
+}
+.sign-out-button {
   width: 80px;
   height: 30px;
   border-radius: 5px;
@@ -26,14 +33,22 @@
   color: aliceblue;
   /* font-weight: bold; */
 }
-.user-display {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  width: 125px;
+.gpt-button {
+  height: 40px;
+  background-color: rgb(63, 63, 63);
+  border: none;
+  width: 100px;
+  border-radius: 8px;
+  color: white;
 }
 
+.gpt-button:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
 .header img {
   width: 200px;
+  margin-left: 40px;
+  margin-right: 8px;
 }

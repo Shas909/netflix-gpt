@@ -5,7 +5,7 @@ import "../styles/moviesList.css";
 const MoviesList = ({ title, movies }) => {
   return (
     <div className="movie-cards-container">
-      <h1>{title}</h1>
+      <h1>{title && movies && movies.length > 0 && title}</h1>
       <div className="movie-cards-list">
         {movies &&
           movies.length > 0 &&

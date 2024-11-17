@@ -4,9 +4,13 @@ import "../styles/movieCard.css";
 
 const MovieCard = ({ posterPath }) => {
   return (
-    <div className="movie-card">
-      <img src={IMG_URL + posterPath} />
-    </div>
+    <>
+      {posterPath ? (
+        <div className="movie-card">
+          <img src={IMG_URL + posterPath} />
+        </div>
+      ) : null}
+    </>
   );
 };
 

@@ -14,3 +14,6 @@ export const API_OPTIONS = {
 };
 
 export const IMG_URL = "https://image.tmdb.org/t/p/w200/";
+
+export const OPEN_AI_KEY =
+  "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";

@@ -1,0 +1,39 @@
+.gpt-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px blue solid; */
+  padding: 8px;
+  margin-bottom: 25rem;
+}
+
+.gpt-input {
+  width: 450px;
+  height: 50px;
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+  margin-right: 5px;
+  background-color: rgb(63, 63, 63);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 17px;
+}
+
+.gpt-search-button {
+  height: 50px;
+  width: 100px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  background-color: rgb(179, 176, 176);
+  color: black;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 17px;
+}
+
+.gpt-search-button:hover {
+  background-color: rgb(205, 45, 45);
+  color: white;
+  cursor: pointer;
+}

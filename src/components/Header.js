@@ -7,9 +7,14 @@ import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useSelector } from "react-redux";
 import { LOGO } from "../utils/constants";
+import { toggleGpt } from "../utils/gptSlice";
 
 const Header = () => {
+  const gptState = useSelector((store) => {
+    return store?.gpt?.showGptSearch;
+  });
   const dispatch = useDispatch();
+  const gptDispatch = useDispatch();
   const navigate = useNavigate();
   const userData = useSelector((store) => {
     return store.user;
@@ -49,19 +54,35 @@ const Header = () => {
     //when component is unmounted this will execute
     return () => unsubscribe();
   }, []);
+
+  const gptSearch = () => {
+    gptDispatch(toggleGpt());
+  };
   return (
     <>
       <div className="header">
         <div className="header-content">
           <img src={LOGO} />
           {userData ? (
-            <div className="user-display">
-              <img
-                style={{ width: "35px", borderRadius: "50px" }}
-                src={userData.photoURL}
-              />
-              <button onClick={signOutButton}>Sign Out</button>
-            </div>
+            <>
+              <div className="user-display">
+                <button
+                  className="gpt-button"
+                  onClick={() => {
+                    gptSearch();
+                  }}
+                >
+                  {!gptState ? "AI Search" : "Home"}
+                </button>
+                <img
+                  style={{ width: "35px", borderRadius: "50px" }}
+                  src={userData.photoURL}
+                />
+                <button className="sign-out-button" onClick={signOutButton}>
+                  Sign Out
+                </button>
+              </div>
+            </>
           ) : null}
         </div>
       </div>
