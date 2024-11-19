@@ -17,6 +17,21 @@
   animation-duration: 2s;
   animation-name: appear;
 }
+
+@media screen and (max-width: 396px) {
+  .login-card {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation-duration: 2s;
+    animation-name: appear;
+  }
+}
 @keyframes appear {
   0% {
     opacity: 0%;
@@ -55,10 +70,24 @@
   padding-left: 10px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 396px) {
+  .input-container input {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(37, 37, 37);
+    font-size: 15px;
+    color: white;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+}
 
 .input-container button {
   margin-top: 20px;
-  width: 300px;
+  width: 100%;
   height: 35px;
   border-radius: 5px;
   border: none;

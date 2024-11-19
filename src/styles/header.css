@@ -5,50 +5,76 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky; /* Makes the header stick */
-  top: 0; /* Ensures the header stays at the top */
-  z-index: 1000; /* Keeps the header above other content */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 95%;
+  gap: 10px;
 }
 
 .user-display {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5px;
-  width: auto;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
 }
-.sign-out-button {
-  width: 80px;
-  height: 30px;
+
+.sign-out-button,
+.gpt-button {
+  height: 40px; /* Consistent height */
   border-radius: 5px;
-  background-color: rgb(212, 21, 21);
   border: none;
   cursor: pointer;
-  color: aliceblue;
-  /* font-weight: bold; */
 }
+
+.sign-out-button {
+  width: 80px;
+  background-color: rgb(212, 21, 21);
+  color: aliceblue;
+}
+
 .gpt-button {
-  height: 40px;
-  background-color: rgb(63, 63, 63);
-  border: none;
   width: 100px;
-  border-radius: 8px;
+  background-color: rgb(63, 63, 63);
   color: white;
+  border-radius: 8px;
 }
 
 .gpt-button:hover {
   color: black;
   background-color: white;
-  cursor: pointer;
 }
+
 .header img {
   width: 200px;
-  margin-left: 40px;
+  margin-left: 20px; /* Adjusted for spacing */
   margin-right: 8px;
+}
+
+@media screen and (max-width: 533px) {
+  .user-display {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0;
+    margin: 0;
+  }
+  .user-display img {
+    display: none;
+  }
+  .gpt-button {
+    width: 80px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
 }
