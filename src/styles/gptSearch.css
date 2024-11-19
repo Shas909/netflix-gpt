@@ -37,3 +37,30 @@
   color: white;
   cursor: pointer;
 }
+
+@media screen and (max-width: 533px) {
+  .gpt-input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    margin-right: 5px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 17px;
+  }
+
+  .gpt-search-button {
+    height: 40px;
+    width: 65px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    background-color: rgb(179, 176, 176);
+    color: black;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 12px;
+  }
+}
